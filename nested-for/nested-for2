@@ -1,0 +1,12 @@
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+dictionary = {}
+
+for x in adj:
+    dictionary[x] = []
+
+    for y in fruits:
+        dictionary[x].append(y)
+
+print(dictionary)

@@ -1,0 +1,16 @@
+talabalar = []
+n = int(input("Nechta talaba ma'lumotlarini kiritmoqchisiz? "))
+while True:
+    for i in range(n):
+        talaba = {}
+        talaba['ism'] = input(f"{i+1}-talabaning ismi: ")
+        talaba['familiya'] = input(f"{i+1}-talabaning familiyasi: ")
+        talaba['yosh'] = int(input(f"{i+1}-talabaning yoshi: "))
+        talaba['kurs'] = int(input(f"{i+1}-talabaning kursi: "))
+        talabalar.append(talaba)
+    
+    yana = input("Yana ma'lumot kiritmoqchimisiz? (ha/yo'q): ")
+    if yana.lower() not in ["ha", "yes",'da','+']:
+        break
+for talaba in talabalar:
+    print(f"{talaba['ism']} {talaba['familiya']}, {talaba['yosh']} yoshda, {talaba['kurs']}-kurs talaba.")
