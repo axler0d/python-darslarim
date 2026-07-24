@@ -1,0 +1,11 @@
+talaba = {}
+while True:
+    ism = input("Ismingizni kiriting: ")
+    yosh = int(input("Yoshingizni kiriting: "))
+    talaba['ism'] = ism
+    talaba[yosh] = yosh
+    for kalit,qiymat in talaba.items():
+        print(f"{kalit} : {qiymat}")
+    javob = input("Yana talaba kiritasizmi? ")
+    if javob.lower() not in ['ha','ok','da','+']:
+        break
