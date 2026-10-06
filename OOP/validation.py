@@ -2,7 +2,17 @@ class Talaba:
     def __init__(self,ism,yosh):
         self.ism = ism
         self.yosh =  yosh
-        
+
+    @property
+    def ism(self):
+        return self.__ism
+
+    @ism.setter
+    def ism(self,yangi):
+        if yangi.isalpha():
+            self.__ism = yangi
+        else:
+            raise ValueError("Ism xato kiritilgan: ")
     @property
     def yosh(self):
         return self.__yosh
